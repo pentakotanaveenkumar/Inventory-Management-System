@@ -15,7 +15,7 @@ import com.example.demo.model.SellingProducts;
 import com.example.demo.service.SellingDetailsService;
 
 @RestController
-@RequestMapping("inventory")
+@RequestMapping("/inventory")
 public class SellingDetailsController {
 
 	@Autowired

@@ -52,6 +52,10 @@ public class RawMaterials {
 		this.cost = cost;
 	}
 
+	public RawMaterials() {
+		super();
+	}
+
 	@Override
 	public String toString() {
 		return "RawMaterials [id=" + id + ", name=" + name + ", cost=" + cost + "]";

@@ -1,0 +1,99 @@
+User SignUp:
+
+Link: http://localhost:9002/inventory/users
+mapping:Post
+
+{
+	"username":"user",
+	"password":"123",
+	"firstName":"Naveen",
+	"lastName":"Kumar",
+	"contactNumber":9642845519,
+	"email":"pentakota@gmail.com"
+}
+
+User Details by Username:
+Link: http://localhost:9002/inventory/user
+mapping : Get
+
+=====================================================
+
+User Authentication:
+Link: http://localhost:9002/inventory/authenticate
+mapping: Get
+
+=====================================================
+
+RawMaterilas Add:
+Link: http://localhost:9002/inventory/rawMaterials/add
+mapping: Post
+
+{
+	"name":"wheels",
+	"cost":350
+}
+
+RawMaterials :
+Link: 
+mapping: Get
+=====================================================
+
+PurchaseDetails:
+Link: http://localhost:9002/inventory/purchase
+mapping: Post
+
+[
+	{
+		"name":"wood",
+		"quantity":2
+	},
+	{
+		"name":"wheels",
+		"quantity":2
+	}
+]
+
+========================================================
+
+Stock
+
+Get All Stock
+Link: http://localhost:9002/inventory/stock
+mapping: Get
+
+Delete A stock
+Link: http://localhost:9002/inventory/stock?name=wheels
+mapping: Delete
+
+========================================================
+
+Finished Products:
+Add Finished Products
+Link: http://localhost:9002/inventory/finishedproducts/update
+mapping: Post
+[
+	{
+		"productName":"chair",
+		"quantity":2,
+		"cost":2000
+	},{
+		"productName":"bed",
+		"quantity":2,
+		"cost":6000
+	},{
+		"productName":"table",
+		"quantity":1,
+		"cost":1500
+	}
+	
+]
+
+Get All Finished Products
+Link: http://localhost:9002/inventory/finishedproducts/update
+mapping: Get
+
+============================================================
+
+Selling Details:
+Link: 
+

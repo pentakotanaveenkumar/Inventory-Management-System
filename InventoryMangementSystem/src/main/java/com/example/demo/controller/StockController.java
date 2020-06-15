@@ -14,7 +14,7 @@ import com.example.demo.exception.RawMaterialsNotFoundException;
 import com.example.demo.service.StockService;
 
 @RestController
-@RequestMapping("inventory")
+@RequestMapping("/inventory")
 public class StockController {
 	@Autowired
 	StockService stockService;

@@ -19,7 +19,7 @@ public class RawMaterialsController {
 	@Autowired
 	RawMaterialService rawMaterialService;
 	
-	@PostMapping("/rawmaterials/add")
+	@PostMapping("/rawMaterials/add")
 	public void addRawMaterilas(@RequestBody RawMaterials rawMaterials) {
 		rawMaterialService.addRawMaterials(rawMaterials);
 	}
