@@ -50,5 +50,6 @@ public class FinishedProductsServiceTest {
 		finishedProductsList.add(new FinishedProducts(2, "bed", 2500, 6));
 		verify(finishedProductsRepository,never()).save(finishedProducts);	
 	}
+	
 
 }
