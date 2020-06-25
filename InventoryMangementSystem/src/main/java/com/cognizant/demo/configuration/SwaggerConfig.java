@@ -1,4 +1,4 @@
-package com.cognizant.demo;
+package com.cognizant.demo.configuration;
 
 import static com.google.common.base.Predicates.or;
 import static springfox.documentation.builders.PathSelectors.regex;

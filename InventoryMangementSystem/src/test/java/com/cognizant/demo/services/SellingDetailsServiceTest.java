@@ -36,7 +36,7 @@ public class SellingDetailsServiceTest {
 		List<SellingProducts> sellingProductsList=new ArrayList<SellingProducts>();
 		sellingProductsList.add(new SellingProducts("chair", 2));		
 		when(finishedProductsRepository.findByProductName("chair")).thenReturn(new FinishedProducts(1, "chair", 1500, 6));
-		assertEquals(3000, sellingDetailsService.getSellingDetails(sellingProductsList).getTotalCost());
+		assertEquals(3000L, sellingDetailsService.getSellingDetails(sellingProductsList).getTotalCost());
 		
 		
 	}

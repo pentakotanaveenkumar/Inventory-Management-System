@@ -13,7 +13,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 
-import com.cognizant.demo.AuthenticateServiceConstants;
+import com.cognizant.demo.constants.AuthenticateServiceConstants;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;

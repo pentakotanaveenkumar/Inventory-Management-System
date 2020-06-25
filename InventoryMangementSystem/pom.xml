@@ -17,6 +17,7 @@
 
 	<properties>
 		<java.version>1.8</java.version>
+
 	</properties>
 
 	<dependencies>
@@ -83,19 +84,25 @@
 			<version>2.9.2</version>
 		</dependency>
 
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>
-				spring-cloud-starter-netflix-eureka-client
-			</artifactId>
-		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-redis</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>
+				spring-cloud-starter-netflix-eureka-client
+			</artifactId>
 		</dependency>
 	</dependencies>
 
@@ -109,14 +116,14 @@
 				<groupId>org.sonarsource.scanner.maven</groupId>
 				<artifactId>sonar-maven-plugin</artifactId>
 				<version>3.3.0.603</version>
-				<executions>
-					<execution>
-						<phase>verify</phase>
-						<goals>
-							<goal>sonar</goal>
-						</goals>
-					</execution>
-				</executions>
+					<executions>
+						<execution>
+							<phase>verify</phase>
+							<goals>
+								<goal>sonar</goal>
+							</goals>
+						</execution>
+					</executions>
 			</plugin>
 		</plugins>
 	</build>

@@ -1,4 +1,4 @@
-package com.cognizant.demo;
+package com.cognizant.demo.configuration;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
