@@ -61,7 +61,7 @@ public class SwaggerConfig {
 	    }
 
 	    private ApiInfo metaData() {
-	        ApiInfo apiInfo = new ApiInfo(
+	        return new ApiInfo(
 	                "Inventory Management API",
 	                "Restful API to manage the Inventory Management Application.",
 	                "V1.0",
@@ -69,7 +69,6 @@ public class SwaggerConfig {
 	                new Contact("Pentakota Naveen Kumar", "https://github.com", "pentakota@gmail.com"),
 	                "Apache License Version 2.0",
 	                "https://www.apache.org/licenses/LICENSE-2.0", new ArrayList<>());
-	        return apiInfo;
 	    }
 
 	    @Bean

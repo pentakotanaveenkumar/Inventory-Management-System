@@ -24,7 +24,7 @@ import io.swagger.annotations.ApiOperation;
 @RequestMapping("/inventory")
 public class UserController {
 	
-	private static Logger LOGGER=LoggerFactory.getLogger(UserController.class);
+	private static final Logger LOGGER=LoggerFactory.getLogger(UserController.class);
 	
 	@Autowired
 	private UserService userService;

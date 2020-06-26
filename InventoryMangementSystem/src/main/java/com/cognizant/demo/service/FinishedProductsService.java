@@ -16,7 +16,7 @@ import com.cognizant.demo.repository.FinishedProductsRepository;
 @Service
 public class FinishedProductsService {
 	
-	private static Logger LOGGER=LoggerFactory.getLogger(FinishedProductsService.class);
+	private static final Logger LOGGER=LoggerFactory.getLogger(FinishedProductsService.class);
 
 	@Autowired
 	FinishedProductsRepository finishedProductsRepository;

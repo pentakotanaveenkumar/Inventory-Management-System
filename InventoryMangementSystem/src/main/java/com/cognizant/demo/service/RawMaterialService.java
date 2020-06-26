@@ -15,7 +15,7 @@ import com.cognizant.demo.repository.RawMaterialsRepository;
 @Service
 public class RawMaterialService {
 	
-	private static Logger LOGGER=LoggerFactory.getLogger(RawMaterialService.class);
+	private static final Logger LOGGER=LoggerFactory.getLogger(RawMaterialService.class);
 	
 	@Autowired
 	RawMaterialsRepository rawMaterialsRepository;

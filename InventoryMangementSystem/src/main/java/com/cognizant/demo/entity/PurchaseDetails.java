@@ -73,40 +73,4 @@ public class PurchaseDetails {
 		return "PurchaseDetails [id=" + id + ", dateOfPurchase=" + dateOfPurchase + ", totalCost=" + totalCost
 				+ ", rawMaterialList=" + rawMaterialList + "]";
 	}
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((dateOfPurchase == null) ? 0 : dateOfPurchase.hashCode());
-		result = prime * result + id;
-		result = prime * result + ((rawMaterialList == null) ? 0 : rawMaterialList.hashCode());
-		result = prime * result + (int) (totalCost ^ (totalCost >>> 32));
-		return result;
-	}
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		PurchaseDetails other = (PurchaseDetails) obj;
-		if (dateOfPurchase == null) {
-			if (other.dateOfPurchase != null)
-				return false;
-		} else if (!dateOfPurchase.equals(other.dateOfPurchase))
-			return false;
-		if (id != other.id)
-			return false;
-		if (rawMaterialList == null) {
-			if (other.rawMaterialList != null)
-				return false;
-		} else if (!rawMaterialList.equals(other.rawMaterialList))
-			return false;
-		if (totalCost != other.totalCost)
-			return false;
-		return true;
-	}
-	
 }

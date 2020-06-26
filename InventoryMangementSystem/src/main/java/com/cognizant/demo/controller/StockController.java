@@ -23,7 +23,7 @@ import io.swagger.annotations.ApiOperation;
 @RequestMapping("/inventory")
 public class StockController {
 	
-	private static Logger LOGGER=LoggerFactory.getLogger(StockController.class);
+	private static final Logger LOGGER=LoggerFactory.getLogger(StockController.class);
 	
 	@Autowired
 	StockService stockService;

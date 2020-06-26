@@ -20,7 +20,7 @@ import io.jsonwebtoken.SignatureAlgorithm;
 
 @RestController
 public class AuthenticationController {
-	public static Logger LOGGER = LoggerFactory.getLogger(AuthenticationController.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(AuthenticationController.class);
 	
 	
 	@GetMapping("/inventory/authenticate")
@@ -29,7 +29,7 @@ public class AuthenticationController {
 		String user = getUser(authHeader);
 		AuthenticateServiceConstants.LOGGER.debug(user);
 		String role = SecurityContextHolder.getContext().getAuthentication().getAuthorities().toArray()[0].toString();
-		Map<String, String> auth = new HashMap<String, String>();
+		Map<String, String> auth = new HashMap<>();
 		auth.put("token", generateJwt(user));
 		auth.put("role", role);
 		LOGGER.debug("End");
@@ -48,7 +48,6 @@ public class AuthenticationController {
 		builder.setIssuedAt(new Date());
 		builder.setExpiration(new Date((new Date()).getTime() + 1200000));
 		builder.signWith(SignatureAlgorithm.HS256, "secretkey");
-		String token = builder.compact();
-		return token;
+		return builder.compact();
 	}
 }

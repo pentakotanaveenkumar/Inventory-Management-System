@@ -17,12 +17,11 @@ import com.cognizant.demo.service.AppUserDetailsService;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
-	public static Logger LOGGER = LoggerFactory.getLogger(SecurityConfig.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(SecurityConfig.class);
 	@Autowired
 	AppUserDetailsService appUserDetailsService;
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-		//auth.userDetailsService(inMemoryDetailsManger());
 		LOGGER.info("Configure auth Start");
 		auth.userDetailsService(appUserDetailsService).passwordEncoder(passwordEncoder());
 		LOGGER.info("Configure auth End");
@@ -42,6 +41,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 				.antMatchers("/inventory/rawmaterials/add").authenticated()
 				.antMatchers("/inventory/rawmaterils").authenticated()
 				.antMatchers("/inventory/selling").authenticated()
+				.antMatchers("/storage/uploadFile").authenticated()
+				.antMatchers("/storage/deleteFile").authenticated()
 				.and().addFilter(new JwtAuthorizationFilter(authenticationManager()));
 	}
 

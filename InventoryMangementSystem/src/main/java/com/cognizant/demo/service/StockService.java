@@ -18,7 +18,7 @@ import com.cognizant.demo.repository.StockRepository;
 @Service
 public class StockService {
 	
-	private static Logger LOGGER=LoggerFactory.getLogger(StockService.class);
+	private static final Logger LOGGER=LoggerFactory.getLogger(StockService.class);
 	
 	@Autowired
 	StockRepository stockRepository;

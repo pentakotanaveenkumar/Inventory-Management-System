@@ -22,7 +22,7 @@ import com.cognizant.demo.repository.SellingDetailsRepository;
 @Service
 public class SellingDetailsService {
 	
-	private static Logger LOGGER=LoggerFactory.getLogger(SellingDetailsService.class);
+	private static final Logger LOGGER=LoggerFactory.getLogger(SellingDetailsService.class);
 
 	@Autowired
 	SellingDetailsRepository sellingDetailsRepository;

@@ -22,7 +22,7 @@ import io.swagger.annotations.ApiOperation;
 @RequestMapping("/inventory")
 public class RawMaterialsController {
 	
-	private static Logger LOGGER=LoggerFactory.getLogger(RawMaterialsController.class);
+	private static final Logger LOGGER=LoggerFactory.getLogger(RawMaterialsController.class);
 
 	@Autowired
 	RawMaterialService rawMaterialService;
