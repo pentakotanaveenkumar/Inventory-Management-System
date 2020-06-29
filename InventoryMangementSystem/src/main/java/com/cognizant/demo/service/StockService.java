@@ -15,6 +15,7 @@ import com.cognizant.demo.exception.RawMaterialsNotFoundException;
 import com.cognizant.demo.repository.RawMaterialsRepository;
 import com.cognizant.demo.repository.StockRepository;
 
+
 @Service
 public class StockService {
 	
@@ -40,7 +41,8 @@ public class StockService {
 		if(stock!=null) {
 		stockRepository.delete(stock);
 		}else
-			throw new RawMaterialsNotFoundException();
+		
+		throw new RawMaterialsNotFoundException();
 	}
 
 }
